@@ -1,0 +1,10 @@
+.breadcrumbs {
+  background-color: var(--primary-color-4);
+  color: var(--primary-color-2-2);
+  padding: 10px 0;
+  font-weight: 500;
+}
+
+.breadcrumbs-links a {
+  color: var(--primary-color-1);
+}

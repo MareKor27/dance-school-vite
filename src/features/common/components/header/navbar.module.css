@@ -1,0 +1,83 @@
+.page-header {
+  background-color: var(--primary-color-2-3);
+  border-bottom: 1px solid var(--primary-color-1);
+  z-index: 900;
+}
+
+.quick-contact {
+  background-color: var(--primary-color-2-4);
+  color: var(--primary-color-4);
+  font-family: var(--primary-font-9);
+  padding: 5px 0;
+}
+
+.tel-email,
+.tel-email .tel,
+.tel-email .email {
+  display: flex;
+  flex-direction: row;
+}
+.email {
+  margin: 0 30px 0 0;
+}
+.tel-email p {
+  margin-bottom: 0;
+  font-family: var(--primary-font-8);
+}
+
+.navbar-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  margin: 10px 0 10px 0px;
+}
+
+ul.header-links {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px 0 0;
+}
+
+li {
+  margin: 5px 0;
+  padding: 10px;
+  position: relative;
+}
+
+a.active.nav-link::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: var(--primary-color-1);
+  transition: width 0.2s;
+}
+
+a.nav-link::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background: var(--primary-color-4);
+  transition: width 0.2s;
+}
+
+a.nav-link:hover::after {
+  width: 100%;
+}
+
+a.nav-link {
+  font-family: var(--primary-font-8);
+  letter-spacing: 1px;
+}

@@ -1,0 +1,20 @@
+.benefit-cards-section {
+  height: auto;
+  width: 100%;
+  background-color: var(--primary-color-2-3);
+  padding-top: calc(var(--module-padding) * 0.5);
+  padding-bottom: calc(var(--module-padding) * 1);
+  border-bottom: 1px solid var(--primary-color-1);
+}
+
+.img-card {
+  border-radius: 20px;
+}
+
+.swiper {
+  padding-top: calc(var(--module-padding) * 0.5);
+}
+
+.custom-slide {
+  padding: 0 25px;
+}

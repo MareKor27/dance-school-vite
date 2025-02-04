@@ -1,0 +1,10 @@
+.gototop {
+  cursor: pointer;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  right: 3%;
+  z-index: 1000;
+  top: 90vh;
+}
