@@ -1,11 +1,11 @@
 import { SubPageContent } from "../../../app/components/subPageContent/SubPageContent";
 import { DefaultLayout } from "../../../app/layout/DefaultLayout";
-import style from "../../../app/components/subPageContent/subPageContent.module.css";
+import style_instructors from "../../../app/components/subPageContent/instructors.module.scss";
 import useStyles from "../../../app/hooks/useStyle";
 import { Breadcrumbs } from "../../components/breadcrumbs/Breadcrumbs";
 
 export function Instructors() {
-  const s = useStyles(style);
+  const s = useStyles(style_instructors);
   return (
     <DefaultLayout>
       <Breadcrumbs namePage={"Instruktorzy"} />

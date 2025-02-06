@@ -1,10 +1,12 @@
-import style from "./navbar.module.css";
+import style from "./navbar.module.scss";
 
 import { SitePaths } from "../../../app/constants/Paths";
 import { Link, NavLink } from "react-router";
 import useStyles from "../../../app/hooks/useStyle";
+import { useState } from "react";
 
 export function Navbar() {
+  const [showSidebar, setShowSidebar] = useState(false);
   const s = useStyles(style);
   return (
     <nav className={s(`page-header`)}>
@@ -42,13 +44,32 @@ export function Navbar() {
             <img src="\images\guest\maxdance-logo.png" alt="" />
           </Link>
         </div>
-        <ul className={s(`header-links`)}>
+        <ul className={s(`header-links ${showSidebar ? "active" : ""}`)}>
+          <li
+            className={style["button-hamburger-close"]}
+            onClick={() => {
+              setShowSidebar(false);
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="50"
+              viewBox="0 -960 960 960"
+              width="50"
+              fill="var(--primary-color-1)"
+            >
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
+          </li>
           <li>
             <NavLink
               to={SitePaths.INDEX.absolute}
               className={({ isActive }) =>
                 s(isActive ? "active nav-link" : "nav-link")
               }
+              onClick={() => {
+                setShowSidebar(false);
+              }}
 
               // className={activeLink === "link1" ? "active" : ""}
               // onClick={() => handleClick("link1")}
@@ -62,6 +83,9 @@ export function Navbar() {
               className={({ isActive }) =>
                 s(isActive ? "active nav-link" : "nav-link")
               }
+              onClick={() => {
+                setShowSidebar(false);
+              }}
             >
               O NAS
             </NavLink>
@@ -72,6 +96,9 @@ export function Navbar() {
               className={({ isActive }) =>
                 s(isActive ? "active nav-link" : "nav-link")
               }
+              onClick={() => {
+                setShowSidebar(false);
+              }}
             >
               INSTRUKTORZY
             </NavLink>
@@ -82,6 +109,9 @@ export function Navbar() {
               className={({ isActive }) =>
                 s(isActive ? "active nav-link" : "nav-link")
               }
+              onClick={() => {
+                setShowSidebar(false);
+              }}
             >
               OFERTA
             </NavLink>
@@ -92,6 +122,9 @@ export function Navbar() {
               className={({ isActive }) =>
                 s(isActive ? "active nav-link" : "nav-link")
               }
+              onClick={() => {
+                setShowSidebar(false);
+              }}
             >
               GRAFIK
             </NavLink>
@@ -102,6 +135,9 @@ export function Navbar() {
               className={({ isActive }) =>
                 s(isActive ? "active nav-link" : "nav-link")
               }
+              onClick={() => {
+                setShowSidebar(false);
+              }}
             >
               GALERIA
             </NavLink>
@@ -112,6 +148,9 @@ export function Navbar() {
               className={({ isActive }) =>
                 s(isActive ? "active nav-link" : "nav-link")
               }
+              onClick={() => {
+                setShowSidebar(false);
+              }}
             >
               CENNIK
             </NavLink>
@@ -122,11 +161,31 @@ export function Navbar() {
               className={({ isActive }) =>
                 s(isActive ? "active nav-link" : "nav-link")
               }
+              onClick={() => {
+                setShowSidebar(false);
+              }}
             >
               KONTAKT
             </NavLink>
           </li>
         </ul>
+        <div
+          className={s("button-hamburger-open")}
+          onClick={() => {
+            console.log("XD");
+            setShowSidebar(true);
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="50"
+            viewBox="0 -960 960 960"
+            width="50"
+            fill="var(--primary-color-1)"
+          >
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg>
+        </div>
       </div>
     </nav>
   );

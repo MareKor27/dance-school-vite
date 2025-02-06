@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import style from "./footer.module.css";
+import style from "./footer.module.scss";
 import useStyles from "../../../app/hooks/useStyle";
 import { ExternalPaths, SitePaths } from "../../../app/constants/Paths";
 

@@ -1,4 +1,4 @@
-import style from "./subPageContent.module.css";
+import style from "./subPageContent.module.scss";
 import useStyles from "../../hooks/useStyle";
 import { ReactNode } from "react";
 

@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { Navbar } from "../../common/components/header/Navbar";
 import { Footer } from "../../common/components/footer/Footer";
-import "./defaultLayout.css";
+import "./defaultLayout.scss";
 import ScrollToTop from "../../common/components/scrollToTop/ScrollToTop";
 import { SocialMedia } from "../../common/components/socialMedia/SocialMedia";
 import { GoToTop } from "../../common/components/goToTop/GoToTop";

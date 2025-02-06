@@ -1,8 +1,7 @@
 import { DefaultLayout } from "../../../app/layout/DefaultLayout";
-import style from "../../../app/components/subPageContent/subPageContent.module.css";
+import style from "../../../app/components/subPageContent/subPageContent.module.scss";
 import useStyles from "../../../app/hooks/useStyle";
 import { useState } from "react";
-import { Tab, Row, Col, Nav } from "react-bootstrap";
 import { Breadcrumbs } from "../../components/breadcrumbs/Breadcrumbs";
 import { SubPageContent } from "../../../app/components/subPageContent/SubPageContent";
 

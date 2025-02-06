@@ -1,4 +1,4 @@
-import style from "./Breadcrumbs.module.css";
+import style from "./Breadcrumbs.module.scss";
 import useStyles from "../../../app/hooks/useStyle";
 type BreadcrumbsType = {
   namePage: string;

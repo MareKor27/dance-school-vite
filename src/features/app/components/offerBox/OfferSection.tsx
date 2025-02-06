@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
-import style from "./offerSection.module.css";
+import style from "./offerSection.module.scss";
 import useStyles from "../../hooks/useStyle";
+import { SitePaths } from "../../constants/Paths";
+import { Link } from "react-router";
 
 export function OfferSection() {
   const s = useStyles(style);
@@ -88,6 +90,14 @@ export function OfferSection() {
             />
             <h3 className={s(`box-heading`)}>ZUMBA</h3>
           </div>
+        </div>
+        <div className={s(`links`)}>
+          <Link to={SitePaths.GALLERY.absolute}>
+            <button>Zobacz galerię</button>
+          </Link>
+          <Link to={SitePaths.LESSON_PLAN.absolute}>
+            <button>Grafik zajęć</button>
+          </Link>
         </div>
       </div>
     </section>

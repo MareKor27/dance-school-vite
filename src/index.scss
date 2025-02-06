@@ -1,3 +1,5 @@
+@use "/src/scss/abstracts/" as *;
+
 :root {
   --primary-color-1: #db3188;
   --primary-cerise-700: #bd1968;
@@ -84,17 +86,26 @@ h1 {
   font-family: var(--primary-font-8);
   font-size: 3rem;
   margin-bottom: 0.5em;
+  @include screen-xs {
+    font-size: 2rem;
+  }
 }
 
 h2 {
   font-weight: 300;
   font-size: 2.5rem;
+  @include screen-xs {
+    font-size: 2rem;
+  }
 }
 
 h3 {
   font-family: var(--primary-font-7);
   letter-spacing: 2px;
   font-size: 1.5em;
+  @include screen-xs {
+    font-size: 1.2rem;
+  }
 }
 
 p {

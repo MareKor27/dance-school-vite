@@ -1,9 +1,11 @@
 import { DefaultLayout } from "../../../app/layout/DefaultLayout";
-import style from "../../../app/components/subPageContent/subPageContent.module.css";
+import style from "../../../app/components/subPageContent/subPageContent.module.scss";
 import useStyles from "../../../app/hooks/useStyle";
 import { Breadcrumbs } from "../../components/breadcrumbs/Breadcrumbs";
 import { SubPageContent } from "../../../app/components/subPageContent/SubPageContent";
 import { ImageGallery } from "../../components/gallery/ImageGallery";
+import { ExternalPaths } from "../../../app/constants/Paths";
+import { Link } from "react-router";
 export function Gallery() {
   const s = useStyles(style);
   return (
@@ -33,6 +35,17 @@ export function Gallery() {
           imgHeight="auto"
           imgWidth="auto"
         />
+        <h2 className={s(``, `text-center`)}>
+          Więcej naszych zdjęć znajdziesz na:
+        </h2>
+        <div className={s(`links`)}>
+          <Link to={ExternalPaths.FACEBOOK} target={"_blank"}>
+            <button>Facebooku</button>
+          </Link>
+          <Link to={ExternalPaths.INSTAGRAM} target={"_blank"}>
+            <button>Instagramie</button>
+          </Link>
+        </div>
       </SubPageContent>
     </DefaultLayout>
   );

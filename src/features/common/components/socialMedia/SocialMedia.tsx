@@ -1,4 +1,4 @@
-import style from "./socialMedia.module.css";
+import style from "./socialMedia.module.scss";
 import useStyles from "../../../app/hooks/useStyle";
 import { ExternalPaths } from "../../../app/constants/Paths";
 import { Link } from "react-router";

@@ -1,6 +1,6 @@
 import { DefaultLayout } from "../../../app/layout/DefaultLayout";
 import { SubPageContent } from "../../../app/components/subPageContent/SubPageContent";
-import style from "../../../app/components/subPageContent/subPageContent.module.css";
+import style from "../../../app/components/subPageContent/subPageContent.module.scss";
 import useStyles from "../../../app/hooks/useStyle";
 import { Link } from "react-router";
 import { Breadcrumbs } from "../../components/breadcrumbs/Breadcrumbs";

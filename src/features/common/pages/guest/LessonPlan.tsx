@@ -1,5 +1,5 @@
 import { DefaultLayout } from "../../../app/layout/DefaultLayout";
-import style from "../../../app/components/subPageContent/subPageContent.module.css";
+import style from "../../../app/components/subPageContent/lessonPlan.module.scss";
 import useStyles from "../../../app/hooks/useStyle";
 import { Breadcrumbs } from "../../components/breadcrumbs/Breadcrumbs";
 import scheduleData from "../../../../data/scheduleData.json";

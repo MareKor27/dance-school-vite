@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import { Route, Routes } from "react-router";
 import { Home } from "./features/common/pages/guest/Home";
 import { SitePaths } from "./features/app/constants/Paths";

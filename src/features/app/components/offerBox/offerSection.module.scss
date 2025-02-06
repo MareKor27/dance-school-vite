@@ -1,3 +1,5 @@
+@use "/src/scss/abstracts/" as *;
+
 .offer-section {
   height: auto;
   width: 100%;
@@ -9,6 +11,9 @@
     inset 0px 10px 20px var(--primary-color-2-4);
   position: relative;
   z-index: -1;
+  overflow: hidden;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .bg-img {
@@ -29,7 +34,7 @@
   color: var(--primary-color-2-4);
 }
 
-.dance-box:hover .box-heading {
+.single-dance-box:hover .box-heading {
   scale: 1.1;
 }
 
@@ -40,6 +45,12 @@
   row-gap: 40px;
   justify-items: center;
   padding-top: var(--module-padding);
+  @include screen-xs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include screen-xxs {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .single-dance-box {
@@ -63,15 +74,41 @@
   width: 100%;
 }
 
-.dance-box:hover .box-img {
+.single-dance-box:hover .box-img {
   filter: grayscale(0);
   scale: 1.03;
   rotate: -2deg;
   translate: 0 -5px;
 }
 
-.dance-box:nth-child(even):hover .box-img {
+.single-dance-box:nth-child(even):hover .box-img {
   scale: 1.03;
   rotate: 2deg;
   translate: 0 -5px;
+}
+
+.links {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+.links button {
+  scale: 1.2;
+}
+
+/* PAGINATION SWIPER */
+
+:global(.swiper-pagination-bullet) {
+  background-color: var(--primary-color-1);
+  opacity: 0.4;
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background-color: var(--primary-color-1);
+  opacity: 1;
+}
+:global(.swiper-backface-hidden .swiper-slide) {
+  text-align: center;
 }

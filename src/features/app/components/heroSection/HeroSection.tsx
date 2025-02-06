@@ -1,4 +1,4 @@
-import style from "./heroSection.module.css";
+import style from "./heroSection.module.scss";
 import useStyles from "../../hooks/useStyle";
 import { SitePaths } from "../../constants/Paths";
 import { Link } from "react-router";
@@ -9,11 +9,13 @@ export function HeroSection() {
     <div className={s(`hero-section`)}>
       <div className="body-arranged-md">
         <div className={s(`main-box`)}>
-          <img
-            className={s(`hero-image`)}
-            src="\images\guest\main-box-image.webp"
-            alt=""
-          />
+          <div>
+            <img
+              className={s(`hero-image`)}
+              src="\images\guest\main-box-image.webp"
+              alt=""
+            />
+          </div>
           <div className={s(`hero-content`)}>
             <h1 className={s(`hero-box-title`)}>Studio Tańca MAX Dance</h1>
 

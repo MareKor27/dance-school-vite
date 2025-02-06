@@ -1,14 +1,33 @@
 import { useEffect, useRef } from "react";
-import style from "./parallax.module.css";
+import style from "./parallax.module.scss";
 import useStyles from "../../../app/hooks/useStyle";
 
 export function Parallax() {
   const s = useStyles(style);
+  const screenWidth = window.innerWidth;
 
   const parallaxImage = useRef<HTMLImageElement | null>(null);
   const parallaxText = useRef<HTMLDivElement | null>(null);
-  const textPosition = 270;
-  const imagePosition = -100;
+  let textPosition = 270;
+  let imagePosition = -100;
+  let scrollSpeed = -0.1;
+
+  if (screenWidth > 991 && screenWidth < 1199) {
+    textPosition = 300;
+    imagePosition = 100;
+    scrollSpeed = -0.3;
+  }
+  if (screenWidth > 400 && screenWidth <= 991) {
+    textPosition = 100;
+    imagePosition = 70;
+    scrollSpeed = -0.3;
+  }
+
+  if (screenWidth <= 400) {
+    textPosition = 50;
+    imagePosition = 120;
+    scrollSpeed = 0.05;
+  }
 
   useEffect(() => {
     const setInitialParallaxPositions = () => {
@@ -16,10 +35,11 @@ export function Parallax() {
 
       if (parallaxImage.current) {
         parallaxImage.current.style.top =
-          positionY * -0.1 + imagePosition + "px";
+          positionY * scrollSpeed + imagePosition + "px";
       }
       if (parallaxText.current) {
-        parallaxText.current.style.top = positionY * -0.2 + textPosition + "px";
+        parallaxText.current.style.top =
+          positionY * (scrollSpeed * 2) + textPosition + "px";
       }
     };
 
@@ -28,10 +48,11 @@ export function Parallax() {
 
       if (parallaxImage.current) {
         parallaxImage.current.style.top =
-          positionY * -0.1 + imagePosition + "px";
+          positionY * scrollSpeed + imagePosition + "px";
       }
       if (parallaxText.current) {
-        parallaxText.current.style.top = positionY * -0.2 + textPosition + "px";
+        parallaxText.current.style.top =
+          positionY * (scrollSpeed * 2) + textPosition + "px";
       }
     };
     setInitialParallaxPositions();
@@ -43,7 +64,7 @@ export function Parallax() {
 
   return (
     <div className={s(`parallax`)}>
-      <div className={s(`header`)}>
+      <div className={s(`content`)}>
         <img
           src="/images/guest/slider.jpg"
           className={s(`background`)}

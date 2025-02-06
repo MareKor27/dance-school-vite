@@ -3,7 +3,7 @@ import { Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
 import { Card } from "react-bootstrap";
-import ownStyle from "./currentNews.module.css";
+import ownStyle from "./currentNews.module.scss";
 import useStyles from "../../hooks/useStyle";
 import { SitePaths } from "../../constants/Paths";
 import { Link } from "react-router";
@@ -63,6 +63,17 @@ export function CurrentNews() {
           pagination={{ clickable: true }}
           autoplay={{ delay: 5000, pauseOnMouseEnter: true }}
           className={s(`news__swiper`)}
+          breakpoints={{
+            991: {
+              slidesPerView: 3,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            300: {
+              slidesPerView: 1,
+            },
+          }}
         >
           {currentInformation.map((news) => (
             <SwiperSlide className={"h-auto"}>

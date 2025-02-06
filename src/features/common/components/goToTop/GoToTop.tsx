@@ -1,4 +1,4 @@
-import style from "./goToTop.module.css";
+import style from "./goToTop.module.scss";
 
 export function GoToTop() {
   const scrollToTop = () => {

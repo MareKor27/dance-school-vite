@@ -1,0 +1,82 @@
+@use "/src/scss/abstracts/" as *;
+/* GENERAL */
+
+.sub-page-content {
+  padding-top: calc(var(--module-padding) * 1);
+  padding-bottom: calc(var(--module-padding) * 2);
+  @include screen-md(max) {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+.sub-page-content h4 {
+  padding-top: 1rem;
+}
+
+.ul-padding-left {
+  padding-left: 1rem;
+}
+
+.sub-page-content .custom-li-icon {
+  background: url("/images/guest/maxdance-logotype.webp") 2px 5px no-repeat;
+  background-size: 20px;
+  display: table;
+  padding-left: 30px;
+  padding-top: 5px;
+}
+
+.sub-page-content li {
+  padding: 0;
+}
+
+.important-information {
+  color: var(--primary-color-1);
+  font-weight: 800;
+  font-family: var(--primary-font-2);
+  padding: 30px 0 15px 0;
+}
+
+.links {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.links button {
+  scale: 1.2;
+}
+
+/* CONTACT  */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include screen-xs {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* STATUT */
+
+li.lower-alpha {
+  list-style-type: lower-alpha;
+}
+
+/* GALLERY */
+
+.masonry-galery {
+  column-count: 3;
+}
+
+.masonry-galery > img {
+  width: 100%;
+  margin-bottom: 1em;
+  border: 1px solid var(--primary-color-1);
+}
+
+.masonry-galery > img:hover {
+  /* transform: scale(1.1); */
+}

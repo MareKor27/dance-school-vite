@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import style from "./modal.module.css";
+import style from "./modal.module.scss";
 import useStyles from "../../../app/hooks/useStyle";
 
 type ModalType = {
