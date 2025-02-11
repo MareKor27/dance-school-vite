@@ -25,7 +25,14 @@
   color: var(--primary-color-1);
   border: 1px solid var(--primary-color-4);
   padding-left: 10px;
+  // background: rgb(from var(--primary-color-1) calc(r + 1) g calc(b + 0));
 }
+
+// .card-news:hover {
+//   background: hsl(
+//     from var(--primary-color-5) calc(h + 0) calc(s + 0) calc(l + 0) / 0.9
+//   );
+// }
 
 @keyframes goldGlow {
   0%,
