@@ -35,7 +35,7 @@ export function Gallery() {
           imgHeight="auto"
           imgWidth="auto"
         />
-        <h2 className={s(``, `text-center`)}>
+        <h2 className={s(`h2__pading-top`, `text-center`)}>
           Więcej naszych zdjęć znajdziesz na:
         </h2>
         <div className={s(`links`)}>

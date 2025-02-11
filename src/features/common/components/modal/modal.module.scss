@@ -31,7 +31,8 @@
   object-fit: cover;
   margin: 20px 0;
   max-height: 90vh;
-  z-index: 3000;
+  max-width: 90vw;
+  z-index: 902;
 }
 
 /* @media (max-width: 900px) {

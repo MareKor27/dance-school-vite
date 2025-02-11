@@ -24,6 +24,74 @@
   background-color: var(--primary-color-2-2);
   color: var(--primary-color-1);
   border: 1px solid var(--primary-color-4);
+  padding-left: 10px;
+}
+
+@keyframes goldGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 5px #ffcc00);
+  }
+  50% {
+    filter: drop-shadow(0 0 15px #ff9900);
+  }
+}
+
+@keyframes greenGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 5px var(--moss-green-300));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px var(--moss-green-700));
+  }
+}
+.new-course {
+  animation: goldGlow 4s infinite alternate;
+}
+
+// .pulse-shadow-box {
+//   animation: greenGlow 4s infinite alternate;
+// }
+
+// @keyframes movingGradientShadow {
+//   0% {
+//     box-shadow: -10px -10px 20px #ff00ff;
+//   }
+//   25% {
+//     box-shadow: 10px -10px 20px #00ffff;
+//   }
+//   50% {
+//     box-shadow: 10px 10px 20px #ffcc00;
+//   }
+//   75% {
+//     box-shadow: -10px 10px 20px #ff00ff;
+//   }
+//   100% {
+//     box-shadow: -10px -10px 20px #ff00ff;
+//   }
+// }
+
+// @keyframes neonGlow {
+//   0% {
+//     box-shadow: 0 0 10px #eb49a4, 0 0 20px #eb49a4;
+//   }
+//   50% {
+//     box-shadow: 0 0 15px #4f9b4c, 0 0 30px #4f9b4c;
+//   }
+//   100% {
+//     box-shadow: 0 0 10px #ffe6e8, 0 0 20px #ffe6e8;
+//   }
+// }
+
+// .pulse-shadow-box {
+//   // animation: pulseShadow 3s infinite alternate;
+//   animation: movingGradientShadow 3s infinite alternate;
+//   //animation: neonGlow 4s infinite alternate;
+// }
+
+.custom-slide {
+  padding: 0 25px;
 }
 
 .own-card-header {

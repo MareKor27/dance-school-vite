@@ -9,6 +9,7 @@ import { SitePaths } from "../../constants/Paths";
 import { Link } from "react-router";
 
 type CurrentInformationType = {
+  info: string;
   cardHeader: string;
   cardTitle: string;
   cardText: string;
@@ -17,6 +18,7 @@ type CurrentInformationType = {
 
 const currentInformation: CurrentInformationType[] = [
   {
+    info: "newCourse",
     cardHeader: "Sezon taneczny 2024/2025",
     cardTitle: "Sezon taneczny 2024/2025 w studiu tańca Max Dance",
     cardText:
@@ -24,6 +26,7 @@ const currentInformation: CurrentInformationType[] = [
     cardFooterDate: "10.01.2025",
   },
   {
+    info: "importantInfo",
     cardHeader: "Nowe Kursy",
     cardTitle: "Nowe grupy początkujące !! Zapisy!!",
     cardText:
@@ -31,6 +34,7 @@ const currentInformation: CurrentInformationType[] = [
     cardFooterDate: "12.12.2024",
   },
   {
+    info: "",
     cardHeader: "Sezon taneczny 2024/2025",
     cardTitle: "Sezon taneczny 2024/2025 w studiu tańca Max Dance",
     cardText:
@@ -38,6 +42,7 @@ const currentInformation: CurrentInformationType[] = [
     cardFooterDate: "12.12.2024",
   },
   {
+    info: "",
     cardHeader: "Nowe Kursy",
     cardTitle: "Nowe grupy początkujące !! Zapisy!!",
     cardText:
@@ -58,7 +63,6 @@ export function CurrentNews() {
         </header>
         <Swiper
           modules={[Pagination, Scrollbar, A11y, Autoplay]}
-          spaceBetween={50}
           slidesPerView={3}
           pagination={{ clickable: true }}
           autoplay={{ delay: 5000, pauseOnMouseEnter: true }}
@@ -76,8 +80,17 @@ export function CurrentNews() {
           }}
         >
           {currentInformation.map((news) => (
-            <SwiperSlide className={"h-auto"}>
-              <Card className={s(`card-news`, `text-center h-100`)}>
+            <SwiperSlide className={s(`custom-slide`, `h-auto`)}>
+              <Card
+                className={s(
+                  `card-news ${
+                    news.info === "newCourse"
+                      ? "new-course"
+                      : "pulse-shadow-box"
+                  }`,
+                  `text-center h-100`
+                )}
+              >
                 <Card.Header className={s(`own-card-header`)}>
                   {news.cardHeader}
                 </Card.Header>
